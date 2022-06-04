@@ -1,0 +1,40 @@
+<html>
+    <style>
+        body {
+  background-image: url('ceva2.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-size: 100% 100%;
+}
+
+    </style>
+    <body bgcolor=#d4a3ae>
+
+        <center>
+        
+        <h1> Cost Calculation </h1><br>
+        <p>For QR input <mark>1</mark>, For KU input <mark>2</mark></p>
+        <p> For EY input <mark>3</mark>,For TK input <mark>4</mark> </p>
+        <p>For 7L input <mark>5</mark>,For SV input <mark>6</mark> </p>
+        <p>For CX input <mark>7</mark>,For WY input <mark>8</mark></p>
+        <p>For EK input <mark>9</mark></p>
+    
+        
+        <form method="POST", action="{{url_for('predict')}}">
+           <b>Flight name:  <input type="text", name='val', placeholder="enter carriar no "> <br><br> 
+            HAWB :  <input type="text", name='hawb', placeholder="enter number of house"> <br><br>
+            CW :  <input type="text", name='cw', placeholder="enter cw "> <br><br>
+            GW:  <input type="text", name='gw', placeholder="enter gw"> <br><br>
+            Cost:  <input type="text", name='cost', placeholder="enter cost"> <br><br>
+            <input type="submit" , value='cost' >
+        </form>
+        
+        
+        <br><h3>{{ cost }}<h3></h3>
+        <br><h3>{{ price }}<h3></h3>
+        <br><h3>{{ ssc }}<h3></h3>
+    </center>
+
+    </body>
+</html>
